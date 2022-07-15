@@ -10,6 +10,22 @@ def play_video(url):
 
 
 if __name__ == '__main__':
+
+    window = Tk()
+    window.withdraw()
+    answer=simpledialog.askstring(title='Question',prompt='How many cats do you have?')
+    if int(answer) >=3:
+        messagebox.showinfo(title='response',message='You are a crazy cat lady')
+    elif int(answer) <3 and int(answer) >0:
+        play_video('https://www.youtube.com/watch?v=NsUWXo8M7UA')
+    elif int(answer) == 0:
+        play_video('https://www.youtube.com/watch?v=ZJT9CeEhM10')
+
+
+
+
+
+
     # TODO 1) Make a new window variable, window = Tk()
     #      2) Hide the window using the window's .withdraw() method
     #      3) Ask the user how many cats they have
