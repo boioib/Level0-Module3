@@ -1,4 +1,5 @@
 import random
+import sys
 import turtle
 from tkinter import simpledialog
 
@@ -11,8 +12,32 @@ def get_random_color():
 # ====================== DO NOT EDIT THE CODE ABOVE ===========================
 
 if __name__ == '__main__':
-    window = turtle.Screen()
-    window.bgcolor('white')
+ window = turtle.Screen()
+ window.bgcolor('white')
+
+ my_turtle=turtle.Turtle()
+ my_turtle.width(10)
+
+
+ while(True):
+     color=simpledialog.askstring(title='Question',prompt='What color would you like to draw with?')
+
+
+
+
+
+
+
+
+     for i in range(4):
+        my_turtle.pencolor(color)
+
+        if color ==(""):
+            color=(get_random_color())
+            break
+        my_turtle.forward(50)
+        my_turtle.left(360/4)
+
 
     # TODO 1) Create a new Turtle
     #      2) Make the turtle draw a shape (this will take more than one line
@@ -26,4 +51,4 @@ if __name__ == '__main__':
     #         more colors & drawing them
 
     # ===================== DO NOT EDIT THE CODE BELOW ============================
-    turtle.done()
+ turtle.done()
